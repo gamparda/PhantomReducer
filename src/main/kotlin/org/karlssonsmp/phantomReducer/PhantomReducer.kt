@@ -1,5 +1,7 @@
 package org.karlssonsmp.phantomReducer
 
+import org.karlssonsmp.phantomReducer.recovery.RecoveryYaml
+
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.event.Listener
 import org.bukkit.event.EventHandler
@@ -29,6 +31,7 @@ class PhantomReducer : JavaPlugin(), Listener {
     private val prefix = "§9§lᴘʜᴀɴᴛᴏᴍʀᴇᴅᴜᴄᴇʀ §7» §r"
 
     override fun onEnable() {
+        RecoveryYaml.config(this)
         saveDefaultConfig()
 
         spawnRate = loadSpawnRate()
@@ -66,6 +69,7 @@ class PhantomReducer : JavaPlugin(), Listener {
                     return true
                 }
 
+                RecoveryYaml.config(this)
                 reloadConfig()
                 spawnRate = loadSpawnRate()
                 sender.sendMessage("${prefix}§aConfig reloaded! Spawn rate: ${(spawnRate * 100).toInt()}%")

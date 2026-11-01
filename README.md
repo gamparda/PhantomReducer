@@ -31,3 +31,7 @@ Built against Paper API 26.1.2.
 ---
 
 ![PhantomReducer](https://cdn.modrinth.com/data/d5YylCDk/images/7edff8838cb454de5ff6b0d0e071071c8cf5ed32.png)
+
+## 파일 자동 초기화 (1.3.1)
+
+누락된 파일만 기본값으로 재생성하며, 자동 복구용 백업을 생성하거나 이전 내용에서 복원하지 않습니다. 자세한 정책은 [AUTOMATIC-FILES.md](AUTOMATIC-FILES.md)를 참고하세요.
